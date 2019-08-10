@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e099175934d84803b6a6fd678d1a9588",
+    "revision": "d5a6f93f744a479967c141154d8ba00d",
     "url": "/react-crud-shop/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-crud-shop/static/css/2.df9ef6f4.chunk.css"
   },
   {
-    "revision": "20d936dbd86400a6b697",
+    "revision": "cfe317f60aee92a694dc",
     "url": "/react-crud-shop/static/css/main.cfda8877.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-crud-shop/static/js/2.a82b76b9.chunk.js"
   },
   {
-    "revision": "20d936dbd86400a6b697",
-    "url": "/react-crud-shop/static/js/main.9d365d5d.chunk.js"
+    "revision": "cfe317f60aee92a694dc",
+    "url": "/react-crud-shop/static/js/main.d37e4434.chunk.js"
   },
   {
     "revision": "3a7fb6c948fd563e7f7f",
