@@ -13,17 +13,18 @@ import Products from './containers/Products';
 function App() {
   return (
     <div className="App">
-      <Header />
-      <main className="container">
-        <HashRouter basename="/">
+      <HashRouter basename="/">
+        <Header />
+        <main className="container">
+
           <Switch>
             <Route exact path="/" component={Menu} />
             <Route exact path="/products" component={Products} />
             <Route path="*" component={NotFound} />
           </Switch>
-        </HashRouter>
-        {/* <Menu /> */}
-      </main>
+          {/* <Menu /> */}
+        </main>
+      </HashRouter>
 
     </div>
   );
