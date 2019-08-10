@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/react-crud-shop/static/css/main.cfda8877.chunk.css",
-    "main.js": "/react-crud-shop/static/js/main.d37e4434.chunk.js",
-    "main.js.map": "/react-crud-shop/static/js/main.d37e4434.chunk.js.map",
+    "main.js": "/react-crud-shop/static/js/main.f377a227.chunk.js",
+    "main.js.map": "/react-crud-shop/static/js/main.f377a227.chunk.js.map",
     "runtime~main.js": "/react-crud-shop/static/js/runtime~main.13bbc957.js",
     "runtime~main.js.map": "/react-crud-shop/static/js/runtime~main.13bbc957.js.map",
     "static/css/2.df9ef6f4.chunk.css": "/react-crud-shop/static/css/2.df9ef6f4.chunk.css",
-    "static/js/2.a82b76b9.chunk.js": "/react-crud-shop/static/js/2.a82b76b9.chunk.js",
-    "static/js/2.a82b76b9.chunk.js.map": "/react-crud-shop/static/js/2.a82b76b9.chunk.js.map",
+    "static/js/2.dcbb4375.chunk.js": "/react-crud-shop/static/js/2.dcbb4375.chunk.js",
+    "static/js/2.dcbb4375.chunk.js.map": "/react-crud-shop/static/js/2.dcbb4375.chunk.js.map",
     "index.html": "/react-crud-shop/index.html",
-    "precache-manifest.719b4f34d4b2c43f1d34f6a324df8a2e.js": "/react-crud-shop/precache-manifest.719b4f34d4b2c43f1d34f6a324df8a2e.js",
+    "precache-manifest.864c0e864cc4889d8be8729cb80a2cb0.js": "/react-crud-shop/precache-manifest.864c0e864cc4889d8be8729cb80a2cb0.js",
     "service-worker.js": "/react-crud-shop/service-worker.js",
     "static/css/2.df9ef6f4.chunk.css.map": "/react-crud-shop/static/css/2.df9ef6f4.chunk.css.map",
     "static/css/main.cfda8877.chunk.css.map": "/react-crud-shop/static/css/main.cfda8877.chunk.css.map"
