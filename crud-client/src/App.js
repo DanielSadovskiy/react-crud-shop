@@ -15,7 +15,7 @@ function App() {
     <div className="App">
       <Header />
       <main className="container">
-        <HashRouter>
+        <HashRouter basename="/">
           <Switch>
             <Route exact path="/" component={Menu} />
             <Route exact path="/products" component={Products} />
