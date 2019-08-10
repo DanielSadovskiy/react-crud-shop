@@ -4,7 +4,7 @@ import { Navbar, Nav, Button, Form, NavDropdown, FormControl } from "react-boots
 const Header = () => {
     return (
         <div>
-            <HashRouter basename="/">
+            <HashRouter basename="/react-crud-shop/">
                 <Navbar bg="light" expand="lg">
                     <Navbar.Brand href="/">React-Bootstrap</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
