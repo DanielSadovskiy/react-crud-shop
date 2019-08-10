@@ -1,10 +1,10 @@
 import React from "react";
-import { HashRouter } from "react-router-dom;"
+import { HashRouter } from "react-router-dom"
 import { Navbar, Nav, Button, Form, NavDropdown, FormControl } from "react-bootstrap";
 const Header = () => {
     return (
         <div>
-            <HashRouter>
+            <HashRouter basename="/">
                 <Navbar bg="light" expand="lg">
                     <Navbar.Brand href="/">React-Bootstrap</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
