@@ -1,27 +1,33 @@
 import React, { Component } from "react";
+import MediaCard from "../components/Product";
 
 
-                class Products extends Component {
+class Products extends Component {
 
     state = {
         isLoading: true,
         products: []
     };
-    componentDidMount(){
+    componentDidMount() {
         const API_PRODUCTS = 'https://my-json-server.typicode.com/DanielSadovskiy/react-crud-shop/db';
         fetch(API_PRODUCTS)
             .then(res => res.json())
-            .then(products =>{
+            .then(products => {
                 this.setState({
                     products,
-                    isLoading:false
+                    isLoading: false
                 });
             })
     }
     render() {
         return (
-            <h1>Products</h1>
-        );          
+            <div>
+                <h1>Products</h1>
+                {this.state.isLoading ? <h2>Loading products...</h2> : Object.keys(this.state.products
+                    .map((e) => 
+                     <h1>{e}</h1> ))}
+            </div>
+        );
     }
 };
 export default Products;
