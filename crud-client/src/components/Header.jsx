@@ -4,7 +4,7 @@ const Header = () => {
     return (
         <div>
             <Navbar bg="light" expand="lg">
-                <Navbar.Brand href="/react-crud-shop/">React-Bootstrap</Navbar.Brand>
+                <Navbar.Brand href={process.env.PUBLIC_URL + '/'}>React-Bootstrap</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">

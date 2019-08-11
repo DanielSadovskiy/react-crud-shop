@@ -15,7 +15,7 @@ function App() {
     <div className="App">
       <Header />
       <main className="container">
-        <HashRouter basename="/">
+        <HashRouter basename={process.env.PUBLIC_URL}>
           <Switch>
             <Route exact path="/" component={Menu} />
             <Route exact path="/products" component={Products} />
