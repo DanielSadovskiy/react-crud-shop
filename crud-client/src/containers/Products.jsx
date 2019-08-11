@@ -12,7 +12,10 @@ import React, { Component } from "react";
         fetch(API_PRODUCTS)
             .then(res => res.json())
             .then(products =>{
-                console.log(products); 
+                this.setState({
+                    products,
+                    isLoading:false
+                });
             })
     }
     render() {
