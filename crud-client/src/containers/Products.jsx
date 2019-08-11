@@ -8,7 +8,7 @@ import React, { Component } from "react";
         products: []
     };
     componentDidMount(){
-        const API_PRODUCTS = 'https://randomuser.me/api/';
+        const API_PRODUCTS = 'https://github.com/DanielSadovskiy/react-crud-shop/blob/master/db.json';
         fetch(API_PRODUCTS)
             .then(res => res.json())
             .then(products =>{
