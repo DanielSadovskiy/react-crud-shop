@@ -1,9 +1,13 @@
 import React from "react";
 import { Navbar, Nav, Button, Form, NavDropdown, FormControl } from "react-bootstrap";
+const FixedTop = {
+    display:'block'
+
+}
 const Header = () => {
     return (
         <div>
-            <Navbar bg="light" expand="lg">
+            <Navbar  bg="light" expand="lg">
                 <Navbar.Brand href={process.env.PUBLIC_URL + '/'}>React-Bootstrap</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
