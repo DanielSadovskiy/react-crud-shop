@@ -1,0 +1,6 @@
+{
+    "/posts/:type": "/posts?type=:type",
+    "/laptops":"/laptops",
+    "/iphone":"/iphone",
+    "/test/laptops":"/test/laptops"
+  }

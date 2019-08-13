@@ -1,23 +1,22 @@
 import React from 'react';
-import { Card, Button } from 'react-bootstrap';
-import prodcard from '../css/ProductCard.css';
+import { Link } from 'react-router-dom'
 
 
-const ProductCard = (props) => {
+const ProductCard = ({ product }) => {
     return (
-        <Card className={prodcard.card}>
-            <Card.Img variant="top" src="holder.js/100px180" />
-            <Card.Body>
-                <Card.Title><h3>{props.name}</h3></Card.Title>
-                <Card.Text >
-                    <span>Some quick example text to build on the card title and make up the bulk of
-                    the card's content.</span>
-                  
+        
+            <div className="card col-sm-6 col-lg-3 ">
+                <img className="card-img-top" src={product.Image} alt="cat" />
+                <div className="card-body h-100">
+                    <h5 className="card-title">{product.Title}</h5>
+                    <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+                <div className="card-footer">
+                    <Link to={`/products/${product.id}`}>View</Link>
                     
-                </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
-            </Card.Body>
-        </Card>
+                </div>
+            </div>
+       
     )
 }
 export default ProductCard;
