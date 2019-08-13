@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import {getAllProducts} from '../API'
+import ProductCard from "../components/ProductCard";
 
 
 
@@ -28,21 +29,14 @@ class Products extends Component {
 
     }
     render() {
+        
         console.log(this.state.products)
         return (
             
             <div>
                 <h1>Products</h1>
-                {
-                    <div>
-                        {this.state.isLoading ? <h2>Loading products...</h2> :
-                            <h2>Hello</h2>
-                        }
-
-
-                    </div>
-                }
-                {/* <div >
+                
+                <div >
                     {this.state.isLoading ? <h2>Loading products...</h2> : Object.keys(this.state.products)
                         .map((category) =>
                             <div style={flexible} key={category}>
@@ -50,7 +44,7 @@ class Products extends Component {
                                 {Object.keys(this.state.products[category])
                                     .map((product) => <ProductCard product={this.state.products[category][product]} key={this.state.products[category][product]["id"]} />)}
                             </div>)}
-                </div> */}
+                </div> 
             </div>
         );
     }

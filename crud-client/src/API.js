@@ -6,15 +6,34 @@ const API_PRODUCTS = "http://localhost:3000/";
 //         .then(res => res.json())
 // };
 
-export async function getAllProducts() 
-{
-  let result = {};
-  return await Promise.all(exactProductsURL.map(async (url)=> {
-    let response = await fetch(`${API_PRODUCTS}${url}`);
-    let data = await response.json();
-    result[data[0].Type] = Object.assign({},data)
-  }))
+export const getAllProducts = () => {
+   let result = {};
+    return Promise.all(exactProductsURL.map(url=> 
+    fetch(`${API_PRODUCTS}${url}`).then(response=>response.json())))
+    .then(allProducts=>{
+        allProducts.map((category)=>{
+        result[category[0].Type] = Object.values(category);  
+      })
+      console.log(result);
+      return result;
+    })
 }
+// export function getAllProducts() 
+// {
+//   let result = {};
+//   return Promise.all(exactProductsURL.map(async (url)=> {
+//     let response = await fetch(${API_PRODUCTS}${url});
+//     let data = response.json();
+//     return data;
+//   })).then((jsonURLs)=>{
+//       jsonURLs.forEach((jsonurl)=>{
+//           result[jsonurl[0].Type] = Object.values(jsonurl);
+//           console.log(result);
+//       })
+//       return result;
+//   })
+// }
+
 
 
 export function findById(o, id) {
