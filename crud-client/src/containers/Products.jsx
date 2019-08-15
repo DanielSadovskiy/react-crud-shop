@@ -42,7 +42,7 @@ class Products extends Component {
                             <div style={flexible} key={category}>
                                 <h1 style={likeAblock}>{category}</h1>
                                 {Object.keys(this.state.products[category])
-                                    .map((product) => <ProductCard product={this.state.products[category][product]} key={this.state.products[category][product]["id"]} />)}
+                                    .map((product) => <ProductCard edit={true} product={this.state.products[category][product]} key={this.state.products[category][product]["id"]} />)}
                             </div>)}
                 </div> 
             </div>

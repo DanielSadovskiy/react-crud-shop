@@ -8,6 +8,7 @@ import NotFound from './components/NotFound';
 import Products from './containers/Products';
 import SingleProduct from './containers/SingleProduct';
 import CreateProduct from './containers/CreateProduct';
+import editProduct from './containers/EditProduct';
 
 
 
@@ -21,7 +22,8 @@ function App() {
           <Switch>
             <Route exact path="/" component={Menu} />
             <Route exact path="/products/create" component={CreateProduct}/>
-            <Route path="/products/:id" component={SingleProduct}/>
+            <Route path="/:category/:id/edit" component={editProduct}/>
+            <Route path="/:category/:id" component={SingleProduct}/>
             <Route exact path="/products" component={Products} />
             <Route path="*" component={NotFound} />
             

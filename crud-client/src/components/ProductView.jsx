@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.css"
 import view from "../css/ProductView.css"
 
 
-const ProductView = ({ product }) => {
+const ProductView = ({ product,edit}) => {
     return (
 
         <div className="wrapper">
@@ -21,6 +21,8 @@ const ProductView = ({ product }) => {
                     <div className="product-price-btn">
                         <p><span>78</span>$</p>
                         <button type="button">buy now</button>
+                        { edit ? <Link to={`/${product.Type}/${product.id}/edit`}>Edit</Link>:
+                            <div>You</div>}
                     </div>
                 </div>
             </div>

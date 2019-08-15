@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import ProductForm from './ProductForm';
+import {withRouter} from 'react-router-dom';
 import { createProduct } from '../API';
 
 
 
 class CreateProduct extends Component {
     state = {
-        creating: false,
+        isLoading: false,
         product: {
             "Title": "",
             "Description": "",
@@ -26,9 +27,13 @@ class CreateProduct extends Component {
         this.setState({
             creating:true
         });
+        product.Price = Number(product.Price);
+        product.RAM = Number(product.RAM);
+        product.Quantity = Number(product.Quantity);
         createProduct(product)
-            .then((res)=>{
-                console.log(res);
+            .then((result)=>{
+                console.log(result);
+                this.props.history.push(`/${result.Type}/${result.id}`);
             })
     }
     render() {
@@ -40,5 +45,5 @@ class CreateProduct extends Component {
         )
     }
 }
-export default CreateProduct;
+export default withRouter(CreateProduct);
 

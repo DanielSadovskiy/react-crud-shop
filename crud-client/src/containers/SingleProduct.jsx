@@ -4,30 +4,29 @@ import ProductView from '../components/ProductView';
 
 class SingleProduct extends Component {
     state = {
-        productId:0,
         isLoading: true,
-        products: {},
-        singleProduct: {}
+        product: {}
     }
     componentDidMount() {
-        let {id} = this.props.match.params;
-        getAllProducts()
-            .then(products=>{
+        let {category,id} = this.props.match.params;
+        getProduct(category,id)
+            .then(product=>{
                 this.setState({
                     isLoading:false,
-                    products:products,
-                    productId:id
+                    product:product
+                    
                 })
-                let singleProduct = findById(products,parseInt(this.state.productId));
-                this.setState({singleProduct:singleProduct});
+                console.log(this.state.product)
+               
             })
             
 
     }
 
     render() {
+        console.log(this.state.product)
         return (
-            <h1><ProductView product={this.state.singleProduct}/></h1>
+            <ProductView id={this.state.product.id} product={this.state.product}/>
         )
     }
 }
