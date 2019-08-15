@@ -37,3 +37,9 @@ export function updateProduct(product) {
         }
     }).then(res=>res.json())
 }
+export function deleteProduct(product) {
+    return fetch(`${API_PRODUCTS}${product.Type}/${product.id}`, {
+        method: 'DELETE',
+        
+    }).then(res=>res.json())
+}

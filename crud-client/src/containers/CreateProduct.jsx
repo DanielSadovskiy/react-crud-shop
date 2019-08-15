@@ -14,7 +14,7 @@ class CreateProduct extends Component {
             "Price": 0,
             "Quantity": 0,
             "Image": "",
-            "Type": "",
+            "Type": "laptop",
             "Year": "",
             "RAM": 0,
             "class": "",

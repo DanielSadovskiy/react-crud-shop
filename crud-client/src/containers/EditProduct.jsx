@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
-import { getProduct,createProduct, updateProduct } from '../API';
+import { getProduct, updateProduct } from '../API';
 import {withRouter} from 'react-router-dom'
 
 import ProductForm from './ProductForm';
 
 class editProduct extends Component {
     state = {
-        product: {
-            
-        },
-        isEditing: true
+        product: {},
+        isLoading: true
     }
     
     componentDidMount() {
@@ -36,8 +34,8 @@ class editProduct extends Component {
         
         return (
             <div>
+                {this.state.isLoading ? <h1>Loading edit</h1> : <ProductForm product={this.state.product} confirmForm={this.updateProduct}/> }
                 
-                <ProductForm product={this.state.product} confirmForm={this.updateProduct}/>
             </div>
         )
     }

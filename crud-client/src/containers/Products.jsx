@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import {getAllProducts} from '../API'
+import { getAllProducts, deleteProduct } from '../API'
+import { withRouter } from 'react-router-dom'
 import ProductCard from "../components/ProductCard";
 
 
@@ -28,25 +29,38 @@ class Products extends Component {
             })
 
     }
+    deleteProduct = (prod) => {
+        console.log(prod);
+        deleteProduct(prod)
+            .then(() => {
+                getAllProducts()
+                    .then(productList => {
+                        this.setState({
+                            products: productList,
+                            isLoading: false
+                        });
+                    })
+            })
+    }
     render() {
-        
+
         console.log(this.state.products)
         return (
-            
+
             <div>
                 <h1>Products</h1>
-                
+
                 <div >
                     {this.state.isLoading ? <h2>Loading products...</h2> : Object.keys(this.state.products)
                         .map((category) =>
                             <div style={flexible} key={category}>
                                 <h1 style={likeAblock}>{category}</h1>
                                 {Object.keys(this.state.products[category])
-                                    .map((product) => <ProductCard edit={true} product={this.state.products[category][product]} key={this.state.products[category][product]["id"]} />)}
+                                    .map((product) => <ProductCard deleteProduct={this.deleteProduct} edit={true} product={this.state.products[category][product]} key={this.state.products[category][product]["id"]} />)}
                             </div>)}
-                </div> 
-            </div>
+                </div>
+            </div >
         );
     }
 };
-export default Products;
+export default withRouter(Products);
